@@ -1,0 +1,77 @@
+#btn1{
+width: 70px;
+height: 60px;
+left: 44px;
+top: 19px;
+color: #FFFFFF;
+}
+#btn2{
+width: 76px;
+height: 30.24px;
+left: 670px;
+top: 19px;
+color: #FFFFFF;
+}
+#btn3 {
+width: 71px;
+height: 60px;
+left: 1207px;
+top: 19px;
+color: #FFFFFF;
+}
+#btn4 {
+mix-blend-mode: normal;
+border: 2px solid #B4C6EE;
+border-radius: 15px;
+    
+padding: 0px;
+height: 60px;
+width: 89px;
+left: 1309px;
+top: 19px;
+   
+text-decoration-line: underline;
+color: #B4C6EE;
+}
+button {
+border: none;   
+position: absolute;
+white-space: nowrap;
+text-align: center;
+outline: none;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 25.917px;
+line-height: 30px;
+background-color: transparent;
+}
+
+button:visited { font-weight : bold ; }
+button:focus { font-weight : bold ; }
+button:hover { font-weight : bold ; }
+button:active { font-weight : bold ;}
+
+.header{
+position: absolute;
+width: 1440px;
+height: 72px;
+left: 0px;
+top: 0px;
+z-index: -1;
+background: #202020;
+mix-blend-mode: normal;}
+
+img{
+position: absolute;
+width: 1440px;
+height: 900px;
+left: 0px;
+top: 72px;
+z-index: -2;
+background: url(interface-3614766_1280.png);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+  }
