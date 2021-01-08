@@ -19,14 +19,24 @@ input fields και ισως να τα χειριστούμε στη βάση δ
 
 
       <form >
-          <h1> Signup Form </h1>
-          <label>Username:</label>
-          <input type="username" required v-model="username">
-          <label>Password:</label>
-          <input type="password" required v-model="password">
-          <label>Email:</label>
-          <input type="email" required v-model="email">
+        <h1> Sign up </h1>
+
+        <div class="form_labels">
+            <label>Username:</label>
+            <input type="username" required v-model="username">
+            <label>Password:</label>
+            <input type="password" required v-model="password">
+            <label>Email:</label>
+            <input type="email" required v-model="email">
+        </div> <!-- end form_labels-->
+         
+        <div class="submit">
+            <button>Sign up</button>
+        </div>
+
       </form>
+
+      
 
         <!--ayta ta paragraphs einai apla gia na emfanizoyme o,ti grafei o xrhsths sta input fields
         den exoyn kapoia praktikh xrhsimothta akoma alla deixnw oti tha einai eykolo na syndesoyme
@@ -43,7 +53,7 @@ export default {
     data()
     {
         return{
-            email: '',
+            email: 'Example@_____.com',
             username: '',
             password: ''
         }
@@ -74,6 +84,7 @@ export default {
         height: 100%
     }
     h1{
+        font-size: 30px;
         text-align: center;
         padding: 20px;
         margin-top: auto;
@@ -110,5 +121,18 @@ export default {
         color: #555;
 
     }
-
+    button
+    {
+        background: #303874;
+        border: 0;
+        padding: 10px 20px;
+        margin-top: 50px;
+        color: white;
+        border-radius: 20px;
+        font-size: 15px;
+    }
+    .submit
+    {
+        text-align: center;
+    }
 </style>

@@ -1,6 +1,6 @@
 /* TO DO:  1. Dont't show Signup on every page
         2. Make navigation Bar presentable
-        3. Make Signup button prettier 
+        3. Make Signup button presentable 
         4. Hide Signup button when user is Loged in
         5. Login button
 
