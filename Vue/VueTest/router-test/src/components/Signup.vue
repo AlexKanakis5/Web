@@ -67,7 +67,7 @@ export default {
         */
         cancelSignup()
         {
-            this.$emit('cancel')
+            this.$emit('cancelSignup')
         }
     }
 
