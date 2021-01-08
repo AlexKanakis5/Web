@@ -24,45 +24,25 @@
   <div>
     <Navbar />
   </div>
+  
 
-  <!-- Signup form pou emfanizetai me to pathma toy koumpioy signup me th xrhsh toy toggleSignup.
-  otan patietai to koumpi, h methodos toggleSignup kaleitai kai antistrefei thn timh ShowSignup (true/false)
-  me ton idio tropo, otan o xrhsths pataei sto blur (sto gkri) h timh toy ShowSignup pali antistrefetai (->false)
-  kai h forma signup eksafanizetai
-  -->
-  <button  @click="toggleSignup">Sign up</button>
-  <div v-if="ShowSignup">
-    <Signup @cancel="toggleSignup" />
-  </div>
 
 </template>
 
 <script>
 import Navbar from "./components/Navbar.vue"
-import Signup from "./components/Signup.vue"
 export default 
 {
   name:'App',
-  components: {Navbar, Signup},
-  data()
-  {
-    return {ShowSignup: false}
-  },
-  methods:
-  {
-    toggleSignup ()
-    {
-      this.ShowSignup = !this.ShowSignup
-    }
-    
-  }
+  components: {Navbar},
+  
   
 }
 </script>
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -83,14 +63,7 @@ figure
 body
 {
   margin: 0;
+  background: #f1f1f1
 }
-button
-{
-  font-size: 20px;
-  border: 0;
-  border-radius: 15px;
-  padding: 10px 10px;
-  background-color: #202020;
-  color: white;
-}
+
 </style>
