@@ -6,14 +6,35 @@
 
  */
 
+/* Pros se sxesh me katharh html+css:
+    1. h taxhthta me thn opoia 
+    fortwnoyn oi selides (ligotera requests)
+    2. Navigation bar se oles tis selides (routing)
+    3. Diaxwrismos tmhmatwn kwdika se components. Ayto praktika shmainei pio katharos kwdikas kai oti mporoyme na 
+    epana-xrhsimpoihsoyme ta components (p.x. navbar, Signup form) se alla shmeia sto site h se allo project
+    4. +++++
+*/
+
+
+
 <template>
+  <!-- to navbar brisketai se kathe selida tou main arxeiou kai apla allazei to periexomeno pou deixnoyme(views) mesw routing
+  o skopos mou einai na kanw thn kathe "selida" ena view to opoio mesa na periexei ta diafora components poy xreiazetai gia na trexei
+  -->
   <div>
     <Navbar />
   </div>
+
+  <!-- Signup form pou emfanizetai me to pathma toy koumpioy signup me th xrhsh toy toggleSignup.
+  otan patietai to koumpi, h methodos toggleSignup kaleitai kai antistrefei thn timh ShowSignup (true/false)
+  me ton idio tropo, otan o xrhsths pataei sto blur (sto gkri) h timh toy ShowSignup pali antistrefetai (->false)
+  kai h forma signup eksafanizetai
+  -->
   <button  @click="toggleSignup">Signup</button>
   <div v-if="ShowSignup">
     <Signup @cancel="toggleSignup" />
   </div>
+
 </template>
 
 <script>
