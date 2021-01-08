@@ -88,6 +88,8 @@ export default {
         text-align: center;
         padding: 20px;
         margin-top: auto;
+        text-shadow: 1px 1px  #aaa;
+
     }
     form
     {
@@ -130,6 +132,7 @@ export default {
         color: white;
         border-radius: 20px;
         font-size: 15px;
+        box-shadow: 2px 2px 4px lightslategray;
     }
     .submit
     {
