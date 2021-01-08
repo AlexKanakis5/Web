@@ -19,7 +19,7 @@ export default {
        o xrhsths 
        */ 
         return{
-            username: 'User'
+            username: ''
         }
 
     }
@@ -43,13 +43,14 @@ body
 
 #nav a.router-link-exact-active
 {
-    color: #abbbde;
+    color: white;
+    background: #353c4a;
 }
 #nav 
 {
     padding: 16px;
     font-size: 14px; 
-    background-color: #202020;
+    background-color: #242526;
     width: 100%;
 
 }
