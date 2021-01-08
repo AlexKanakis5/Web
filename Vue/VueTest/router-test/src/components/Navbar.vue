@@ -14,6 +14,18 @@ export default {
 </script>
 
 <style scoped>
+figure
+{
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 10px;
+  margin-inline-end: 0;
+}
+
+body
+{
+  margin: 0;
+}
 
 #nav a.router-link-exact-active
 {
@@ -23,6 +35,8 @@ export default {
 {
     padding: 30px;
     font-size: 1.34rem; 
+    background-color: black;
+    width: 100%;
 
 }
 #nav a 
