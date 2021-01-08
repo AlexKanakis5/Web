@@ -41,10 +41,9 @@ body
   margin: 0;
 }
 
-#nav a.router-link-exact-active
+#nav a.router-link-exact-active 
 {
-    color: white;
-    background: #353c4a;
+ border-bottom: 3px solid;  
 }
 #nav 
 {
@@ -52,7 +51,8 @@ body
     font-size: 14px; 
     background-color: #242526;
     width: 100%;
-
+    box-shadow: 3px 3px 4px #aaa;
+   
 }
 #nav a 
 {
@@ -63,6 +63,9 @@ body
     text-decoration: none;
     border-radius: 4px;
     color: white;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    font-weight: 400;
 
 }
 
