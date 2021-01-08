@@ -30,7 +30,7 @@
   me ton idio tropo, otan o xrhsths pataei sto blur (sto gkri) h timh toy ShowSignup pali antistrefetai (->false)
   kai h forma signup eksafanizetai
   -->
-  <button  @click="toggleSignup">Signup</button>
+  <button  @click="toggleSignup">Sign up</button>
   <div v-if="ShowSignup">
     <Signup @cancel="toggleSignup" />
   </div>
@@ -84,6 +84,13 @@ body
 {
   margin: 0;
 }
-
-
+button
+{
+  font-size: 20px;
+  border: 0;
+  border-radius: 15px;
+  padding: 10px 10px;
+  background-color: #202020;
+  color: white;
+}
 </style>
