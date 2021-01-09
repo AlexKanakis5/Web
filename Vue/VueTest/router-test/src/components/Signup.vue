@@ -1,5 +1,5 @@
-/* TODO:
- 
+/* TODO: 
+        FIX VALIDATION 
  
 */
 
@@ -26,8 +26,10 @@ input fields και ισως να τα χειριστούμε στη βάση δ
             <input type="username" required v-model="username">
             <label>Password:</label>
             <input type="password" required v-model="password">
-            <!-- Password error handlign -->
+            <!-- Password error handling -->
             <!-- Checks only if length > 8 -->
+            <label>Confirm password</label>
+            <input type="password" required v-model="password2">
             <div class="perror">{{password_error}}</div>
 
             <label>Email:</label>
@@ -49,8 +51,19 @@ input fields και ισως να τα χειριστούμε στη βάση δ
         <p>Username: {{username}}</p>
         <p>Password: {{password}}</p>
         <p>Email: {{email}}</p>
+        <p>Password2:{{password2}}</p>
     </div>
 </template>
+
+
+------------------------SCRIPTS-------------------------
+------------------------SCRIPTS-------------------------
+------------------------SCRIPTS-------------------------
+------------------------SCRIPTS-------------------------
+------------------------SCRIPTS-------------------------
+------------------------SCRIPTS-------------------------
+
+
 
 <script>
 export default {
@@ -60,6 +73,7 @@ export default {
             email: 'example@example.com',
             username: '',
             password: '',
+            password2: '',
             password_error:''
         }
 
@@ -80,13 +94,61 @@ export default {
         */ 
         HandleSubmit ()
         {
-           this.password_error = this.password.length > 8 ?
-                '':'Password must be at least 8 characters'
-        }
+         
+            this.PasswordValidation()
+       
+       
+        },
+
+        //---------PASSWORD VALIDATION-------------
+        PasswordValidation()
+        {
+            //----------------------WORKS ----------------
+            if(this.password.length < 8)
+            {
+                this.password_error='Password must be at least 8 characters'
+            } 
+            else if(this.password != this.password2)
+            {
+                this.password_error= 'Passwords do not match'
+            }
+            
+
+            //----------------DOES NOT WORK-----------------
+            else if(this.password.search(/[A-Z]/) < 1 )
+            {
+                this.password_error='uppercase'
+            }
+            else if(this.password.search(/[0-9]/) < 1 )
+            {
+                this.password_error='number'
+            }
+            else if(this.password.search(/[a-z]/) < 1 )
+            {
+                this.password_error='lowercase'
+            }
+            else
+            {
+                this.password_error=''
+            }
+        },
+
     }
 
 }
 </script>
+
+
+
+
+
+------------------------STYLES--------------------------
+------------------------STYLES--------------------------
+------------------------STYLES--------------------------
+------------------------STYLES--------------------------
+------------------------STYLES--------------------------
+
+
 
 <style scoped>
     .blur
@@ -158,5 +220,9 @@ export default {
         font-size: 0.9rem;
         margin-top: 10px;
         font-weight: bold;
+    }
+    p
+    {
+        color: white
     }
 </style>
