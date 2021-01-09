@@ -5,17 +5,19 @@
   kai h forma signup eksafanizetai
   -->
   <div class="home">
+              <!----- LOGO ----->
     <img alt="Vue logo" src="../assets/logo.png">
-  </div>
-  <br>
-  <button  @click="toggleSignup">Sign up</button>
-  <div v-if="ShowSignup">
-    <Signup @cancelSignup="toggleSignup" />
-  </div>
-<br>
-  <button  @click="toggleLogin">Login</button>
-  <div v-if="ShowLogin">
-    <Login @cancelLogin="toggleLogin" />
+
+    <br>
+    <button  @click="toggleSignup">Sign up</button>
+    <div v-if="ShowSignup">
+      <Signup @cancelSignup="toggleSignup" />
+    </div>
+    <br>
+    <button  @click="toggleLogin">Login</button>
+    <div v-if="ShowLogin">
+      <Login @cancelLogin="toggleLogin" />
+    </div>
   </div>
 
 
