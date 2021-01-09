@@ -74,6 +74,12 @@ button
 
   
 }
+img
+{
+  padding: 30px;
+  height: 230px;
+  width: 230px;
+}
 
 
 </style>
