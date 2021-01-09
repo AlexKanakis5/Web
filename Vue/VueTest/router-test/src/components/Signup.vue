@@ -18,7 +18,7 @@ input fields και ισως να τα χειριστούμε στη βάση δ
     <div class="blur" @click.self="cancelSignup" >
 
 
-      <form >
+      <form @submit.prevent="HandleSubmit">
         <h1> Sign up </h1>
 
         <div class="form_labels">
@@ -26,6 +26,10 @@ input fields και ισως να τα χειριστούμε στη βάση δ
             <input type="username" required v-model="username">
             <label>Password:</label>
             <input type="password" required v-model="password">
+            <!-- Password error handlign -->
+            <!-- Checks only if length > 8 -->
+            <div class="perror">{{password_error}}</div>
+
             <label>Email:</label>
             <input type="email" required v-model="email">
         </div> <!-- end form_labels-->
@@ -53,9 +57,10 @@ export default {
     data()
     {
         return{
-            email: 'Example@_____.com',
+            email: 'example@example.com',
             username: '',
-            password: ''
+            password: '',
+            password_error:''
         }
 
     },
@@ -68,6 +73,15 @@ export default {
         cancelSignup()
         {
             this.$emit('cancelSignup')
+        },
+        /* H HanleSumbit kanei ayto poy leei, dhladh diaxeirizetai thn ypobolh ths formas gia na mporoume na diaxeiristoyme ta dedomena
+        sth bash.
+        Epishs periexei kai diaforous kanones gia thn ypobolh, p.x. to elaxisto megethos kwdikou
+        */ 
+        HandleSubmit ()
+        {
+           this.password_error = this.password.length > 8 ?
+                '':'Password must be at least 8 characters'
         }
     }
 
@@ -137,5 +151,12 @@ export default {
     .submit
     {
         text-align: center;
+    }
+    .perror
+    {
+        color: red;
+        font-size: 0.9rem;
+        margin-top: 10px;
+        font-weight: bold;
     }
 </style>
