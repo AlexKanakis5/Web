@@ -71,7 +71,7 @@ export default {
     {
         return{
             email: 'example@example.com',
-            username: '',
+            username: '123456789',
             password: '',
             password2: '',
             password_error:''
@@ -80,6 +80,8 @@ export default {
     },
     methods:
     {
+
+        
         /*h cancel signup kaleitai apo blur oti o xrhsths kanei click se ayto to sthxeio, dhladh sto gkrizo blur poy emfanizetai
         otan brisketai sto signup form kai thelei na kanei cancel
         Sthn oysia dhmioyrgoume ena custom event gia to opoio "akouei" h App.vue (@cancel="toggleSignup")
@@ -88,6 +90,8 @@ export default {
         {
             this.$emit('cancelSignup')
         },
+
+
         /* H HanleSumbit kanei ayto poy leei, dhladh diaxeirizetai thn ypobolh ths formas gia na mporoume na diaxeiristoyme ta dedomena
         sth bash.
         Epishs periexei kai diaforous kanones gia thn ypobolh, p.x. to elaxisto megethos kwdikou
@@ -114,18 +118,16 @@ export default {
             }
             
 
-            //----------------DOES NOT WORK-----------------
-            else if(this.password.search(/[A-Z]/) < 1 )
+            //----------------DOES NOT WORK------s-----------
+            else if(!/[A-Z]/.test(this.password))
             {
                 this.password_error='uppercase'
             }
-            else if(this.password.search(/[0-9]/) < 1 )
+        
+            else if(!/[0-9]/.test(this.password))
+
             {
                 this.password_error='number'
-            }
-            else if(this.password.search(/[a-z]/) < 1 )
-            {
-                this.password_error='lowercase'
             }
             else
             {
