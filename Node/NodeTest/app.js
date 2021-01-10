@@ -17,8 +17,6 @@ app.use(express.static('../router-test/dist', {root: __dirname}));
 app.get('/', (req,res) => {
     res.sendFile('../router-test/build/index.html', {root: __dirname});
   }); 
-app.get('/',(req,res)=>{
-    res.send('<p>homeaaaa</p>');
-});
+
 //listen for requests
 app.listen(3000);
