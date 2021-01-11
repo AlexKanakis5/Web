@@ -2,7 +2,7 @@
 # Αν χρησιμοποιείτε windows προτείνω να εγκαταστήσετε το "Windows Terminal" https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab
 
 
-# Πως να τρέξετε τον server:
+# Πως να τρέξετε τον server: 
 
 1. Ανοίξτε το directory Node/NodeTest μέσω terminal 
 2. npm install
@@ -17,7 +17,7 @@
 3. npm run serve
 4. Βάλτε τη διεύθυνση localhost:8080 στον browser (αυτό θα αλλάξει)
 
-# Πώς να τρέξετε τις αλλαγές στο vue μέσω του server (production):
+# Πώς να τρέξετε το vue μέσω του server (production):
  
 1. Ανοίξτε το directory Node/router-test μέσω terminal 
 2. npm install (αν δεν το έχετε κάνει ήδη σε αυτό το directory-αν δεν έχετε φάκελο node_modules)
@@ -36,3 +36,6 @@
         killall node
         nodemon app
 
+9. Αν θέλετε να έχετε τον server ανοιχτό ενώ κάνετε αλλαγές στο Vue (router-test) τότε αντί για το βήμα 3 γράψτε
+
+        npm run watch
