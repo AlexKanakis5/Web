@@ -13,11 +13,16 @@
     <div v-if="ShowSignup">
       <Signup @cancelSignup="toggleSignup" />
     </div>
+
     <br>
     <button  @click="toggleLogin">Login</button>
     <div v-if="ShowLogin">
       <Login @cancelLogin="toggleLogin" />
     </div>
+
+    <br>
+
+
   </div>
 
 
@@ -36,7 +41,8 @@ export default {
   {
     return {
       ShowSignup: false,
-      ShowLogin: false
+      ShowLogin: false,
+   
     }
 
   },
@@ -50,6 +56,9 @@ export default {
     {
       this.ShowLogin = !this.ShowLogin
     }
+
+
+
     
   }
 }

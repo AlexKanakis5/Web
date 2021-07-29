@@ -1,18 +1,15 @@
 <template>
   <div id="nav">
-  
-      <router-link :to="{ name: 'Home'}">Home</router-link> |
-      <router-link :to="{ name: 'About'}">About</router-link>
-      <router-link :to="{ name: 'User'}">User</router-link> 
-      <router-link :to="{ name: 'Admin'}">Admin</router-link> 
+    <router-link :to="{ name: 'Home'}">Home</router-link> |
+    <router-link :to="{ name: 'About'}">About</router-link>
+    <router-link :to="{ name: 'User'}">User</router-link> 
+
     
-  
+
 
   </div>
+
 <router-view/>
-
-
-
 </template>
 
 <script>
@@ -36,6 +33,7 @@ export default {
 <style scoped>
 figure
 {
+    
   margin-block-start: 0;
   margin-block-end: 0;
   margin-inline-start: 10px;
@@ -45,6 +43,7 @@ figure
 body
 {
   margin: 0;
+  
 }
 
 #nav a.router-link-exact-active 
@@ -52,12 +51,14 @@ body
  border-bottom: 3px solid;  
 }
 #nav 
-{
+{   
+
     padding: 16px;
     font-size: 14px; 
-    background-color: #242526;
+    background-color: white;
     width: 100%;
     box-shadow: 3px 3px 4px #aaa;
+    
    
 }
 #nav a 
@@ -68,7 +69,7 @@ body
     padding: 10px;
     text-decoration: none;
     border-radius: 4px;
-    color: white;
+    color:black;
     -webkit-font-smoothing: antialiased;
     line-height: 1.5;
     font-weight: 400;
