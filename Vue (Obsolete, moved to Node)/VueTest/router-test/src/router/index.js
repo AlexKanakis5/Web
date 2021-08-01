@@ -6,6 +6,7 @@ import Admin from '../views/Admin'
 import Basic_info from '../views/admin_views/Basic_info.vue'
 import Analyse_time from '../views/admin_views/Analyse_time.vue'
 import Analyse_http from '../views/admin_views/Analyse_http.vue'
+import Entries from '../views/admin_views/Entries.vue'
 
 
 
@@ -44,8 +45,12 @@ const routes = [
     path: '/admin_views/Analyse_http.vue',
     name: 'Analyse_http',
     component: Analyse_http
+  },
+  {
+    path: '/admin_views/Entries.vue',
+    name: 'Entries',
+    component: Entries
   }
-
 ]
 
 const router = createRouter({
