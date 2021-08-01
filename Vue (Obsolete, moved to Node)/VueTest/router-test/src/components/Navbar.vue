@@ -26,7 +26,8 @@
       <router-link :to="{ name: 'Admin'}">Admin</router-link> |
       <router-link :to="{ name: 'Basic_info'}">Info</router-link> |
       <router-link :to="{ name: 'Analyse_time'}">Time</router-link> |
-      <router-link :to="{ name: 'Analyse_http'}">HTTP</router-link> 
+      <router-link :to="{ name: 'Analyse_http'}">HTTP</router-link> |
+      <router-link :to="{ name: 'Entries'}">Entries</router-link> 
   </div>
 
 
