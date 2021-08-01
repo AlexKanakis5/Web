@@ -21,7 +21,7 @@
   <!-- to navbar brisketai se kathe selida tou main arxeiou kai apla allazei to periexomeno pou deixnoyme(views) mesw routing
   o skopos mou einai na kanw thn kathe "selida" ena view to opoio mesa na periexei ta diafora components poy xreiazetai gia na trexei
   -->
-  <div>
+  <div >
     <Navbar />
   </div>
   
@@ -35,8 +35,14 @@ import Navbar from "./components/Navbar.vue"
 export default 
 {
   name:'App',
-  components: {Navbar}
-  
+  components: {Navbar},
+   data()
+    {
+        return{
+            
+        }
+
+    }
   
 }
 </script>

@@ -1,14 +1,35 @@
-<template>
-  <div id="nav">
-  
-      <router-link :to="{ name: 'Home'}">Home</router-link> |
-      <router-link :to="{ name: 'About'}">About</router-link>
-      <router-link :to="{ name: 'User'}">User</router-link> 
-      <router-link :to="{ name: 'Admin'}">Admin</router-link> 
-    
-  
+<!--
+   Πρόσθεσα 3 μεταβλητές: show, is_admin, is_user
+   show: οταν θέλουμε να δείξουμε την αρχική σελίδα, δηλαδή όταν ο χρήστης δεν είναι συνδεδεμένος
+   show_admin: όταν θέλουμε να δείξουμε τη σελίδα του admin
+   show_user: όταν θέλουμε να δείξουμε τη σελίδα του user
 
+   Αναλόγως την τιμή της κάθε μεταβλητής true/false ενεργοποιείται το κατάλληλο div
+
+   Αυτό σημαίνει ότι τελικά δεν χρειάζεται το δεύτερο navbar για τον admin
+
+
+ -->
+
+
+<template>
+  <div v-if="show" class="nav" >
+      <router-link :to="{ name: 'Home'}">Home</router-link> |
+      <router-link :to="{ name: 'About'}">About</router-link> |
   </div>
+  
+  <div v-if="is_user" class="nav">
+          <router-link :to="{ name: 'User'}">User</router-link> |
+  </div>
+
+  <div v-if="is_admin" class="nav">
+      <router-link :to="{ name: 'Admin'}">Admin</router-link> |
+      <router-link :to="{ name: 'Basic_info'}">Info</router-link> |
+      <router-link :to="{ name: 'Analyse_time'}">Time</router-link> |
+      <router-link :to="{ name: 'Analyse_http'}">HTTP</router-link> 
+  </div>
+
+
 <router-view/>
 
 
@@ -25,7 +46,10 @@ export default {
        o xrhsths 
        */ 
         return{
-            username: ''
+            username: '',
+            show: false,
+            is_admin: true,
+            is_user: false,
         }
 
     }
@@ -47,11 +71,11 @@ body
   margin: 0;
 }
 
-#nav a.router-link-exact-active 
+.nav a.router-link-exact-active 
 {
  border-bottom: 3px solid;  
 }
-#nav 
+.nav 
 {
     padding: 16px;
     font-size: 14px; 
@@ -60,7 +84,7 @@ body
     box-shadow: 3px 3px 4px #aaa;
    
 }
-#nav a 
+.nav a 
 {
     font-size: 1.34rem;
     text-align: center;

@@ -3,6 +3,11 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import User from '../views/User.vue'
 import Admin from '../views/Admin'
+import Basic_info from '../views/admin_views/Basic_info.vue'
+import Analyse_time from '../views/admin_views/Analyse_time.vue'
+import Analyse_http from '../views/admin_views/Analyse_http.vue'
+
+
 
 const routes = [
   {
@@ -24,6 +29,21 @@ const routes = [
     path: '/admin',
     name: 'Admin',
     component: Admin
+  },
+  {
+    path: '/admin_views/Basic_info.vue',
+    name: 'Basic_info',
+    component: Basic_info
+  },
+  {
+    path: '/admin_views/Analyse_time.vue',
+    name: 'Analyse_time',
+    component: Analyse_time
+  },
+  {
+    path: '/admin_views/Analyse_http.vue',
+    name: 'Analyse_http',
+    component: Analyse_http
   }
 
 ]
