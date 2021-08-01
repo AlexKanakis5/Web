@@ -9,21 +9,17 @@
 </template>
 
 <script>
-import Navbar_Admin from "@/components/Navbar_Admin.vue"
 
 export default 
 {
-  name:'App',
-  components: {Navbar_Admin}
+  name:'App'
+
   
   
 }
 </script>
 
 <style>
-.admin
-{
-    
-}
+
 
 </style>
